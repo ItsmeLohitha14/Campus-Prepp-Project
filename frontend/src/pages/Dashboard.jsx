@@ -75,9 +75,6 @@ export default function DashboardPage() {
     fetchQuestions();
   }, []);
 
-
-
-
   const [form, setForm] = useState({
     department: "",
     year: "",
