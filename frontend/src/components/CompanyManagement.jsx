@@ -4,6 +4,7 @@ import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+
 const CompanyManagement = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -26,7 +27,7 @@ const CompanyManagement = () => {
 
   const fetchCompanies = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/admin/companies", {
+      const res = await axios.get("https://campus-prep-project.onrender.com/api/admin/companies", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -57,7 +58,7 @@ const CompanyManagement = () => {
     try {
       if (editMode) {
         const res = await axios.put(
-          `http://localhost:5000/api/admin/update-company/${editingCompanyId}`,
+          `https://campus-prep-project.onrender.com/api/admin/update-company/${editingCompanyId}`,
           payload,
           {
             headers: {
@@ -69,7 +70,7 @@ const CompanyManagement = () => {
         await fetchCompanies();
       } else {
         const res = await axios.post(
-          "http://localhost:5000/api/admin/add-company",
+          "https://campus-prep-project.onrender.com/api/admin/add-company",
           payload,
           {
             headers: {

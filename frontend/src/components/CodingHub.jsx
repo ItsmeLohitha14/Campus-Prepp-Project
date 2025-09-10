@@ -15,7 +15,7 @@ const CodingHub = () => {
 
   const fetchQuestions = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/questions");
+      const res = await axios.get("https://campus-prep-project.onrender.com/api/questions");
       setQuestions(res.data);
     } catch (err) {
       console.error("Failed to fetch questions:", err);
@@ -30,9 +30,9 @@ const CodingHub = () => {
     e.preventDefault();
     try {
       if (editId) {
-        await axios.put(`http://localhost:5000/api/questions/${editId}`, form);
+        await axios.put(`https://campus-prep-project.onrender.com/api/questions/${editId}`, form);
       } else {
-        await axios.post("http://localhost:5000/api/questions", form);
+        await axios.post("https://campus-prep-project.onrender.com/api/questions", form);
       }
       setForm({ title: "", leetcodeLink: "" });
       setEditId(null);
@@ -49,7 +49,7 @@ const CodingHub = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/questions/${id}`);
+      await axios.delete(`https://campus-prep-project.onrender.com/api/questions/${id}`);
       fetchQuestions();
     } catch (err) {
       console.error("Delete error:", err);

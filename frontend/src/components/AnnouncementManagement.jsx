@@ -35,7 +35,7 @@ export default function AnnouncementManagement() {
 
     try {
       if (editingId) {
-        await axios.put(`http://localhost:5000/api/announcements/${editingId}`, form);
+        await axios.put(`https://campus-prep-project.onrender.com/api/announcements/${editingId}`, form);
         toast.success('Announcement updated!');
         setEditingId(null);
       } else {
@@ -54,7 +54,7 @@ export default function AnnouncementManagement() {
   const handleDelete = async (id) => {
     if (!window.confirm('Are you sure you want to delete this announcement?')) return;
     try {
-      await axios.delete(`http://localhost:5000/api/announcements/${id}`);
+      await axios.delete(`https://campus-prep-project.onrender.com/api/announcements/${id}`);
       fetchAnnouncements();
       toast.success('Announcement deleted!');
     } catch (err) {

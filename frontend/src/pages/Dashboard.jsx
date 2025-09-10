@@ -65,7 +65,7 @@ export default function DashboardPage() {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/questions"); // Replace with your actual endpoint
+        const res = await axios.get("https://campus-prep-project.onrender.com/api/questions"); // Replace with your actual endpoint
         setQuestions(res.data);
       } catch (err) {
         console.error("Error fetching questions", err);
@@ -99,7 +99,7 @@ export default function DashboardPage() {
         const token = localStorage.getItem("token");
         if (!token) return;
 
-        const res = await axios.get("http://localhost:5000/api/users/profile", {
+        const res = await axios.get("https://campus-prep-project.onrender.com/api/users/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -182,7 +182,7 @@ export default function DashboardPage() {
         skills: form.skills.split(",").map((skill) => skill.trim()),
       };
 
-      await axios.put("http://localhost:5000/api/users/update-profile", payload, {
+      await axios.put("https://campus-prep-project.onrender.com/api/users/update-profile", payload, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -204,7 +204,7 @@ export default function DashboardPage() {
 
   const recentUpdates = [
     {
-      title: "Lumen Recruitment Drive Announced",
+      title: "Lumen Recruitment Drive Announced",  
       date: "15 May 2025",
     },
     {

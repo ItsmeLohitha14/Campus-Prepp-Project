@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// ✅ Import routes (only once each)
+// ✅ Import routes (only once each) 
 const adminRoutes = require("./routes/admin");
 const authRoutes = require("./routes/auth");
 const profileRoutes = require("./routes/profile");

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:5000/api/resources";
+const API = "https://campus-prep-project.onrender.com/api/resources";
 
 export const getAllFolders = () => axios.get(`${API}/folders`);
 export const addFolder = (folder) => axios.post(`${API}/add-folder`, folder);

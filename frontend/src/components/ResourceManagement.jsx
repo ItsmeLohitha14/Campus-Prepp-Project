@@ -19,7 +19,7 @@ const ResourceManagement = () => {
 
   // ✅ Fetch folders from backend
   useEffect(() => {
-    fetch("http://localhost:5000/api/resources/folders")
+    fetch("https://campus-prep-project.onrender.com/api/resources/folders")
       .then((res) => res.json())
       .then((data) => setFolders(data))
       .catch((err) => console.error("Failed to fetch folders:", err));
@@ -46,7 +46,7 @@ const ResourceManagement = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/resources/add-folder", {
+      const res = await fetch("https://campus-prep-project.onrender.com/api/resources/add-folder", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...newFolder, files: [] }),
@@ -67,7 +67,7 @@ const ResourceManagement = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/resources/add-file", {
+      const res = await fetch("https://campus-prep-project.onrender.com/api/resources/add-file", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -91,7 +91,7 @@ const ResourceManagement = () => {
     if (!confirm) return;
 
     try {
-      await fetch(`http://localhost:5000/api/resources/folder/${id}`, {
+      await fetch(`https://campus-prep-project.onrender.com/api/resources/folder/${id}`, {
         method: "DELETE",
       });
       setFolders(folders.filter((f) => f._id !== id));
@@ -103,7 +103,7 @@ const ResourceManagement = () => {
   const handleDeleteFile = async (folderId, fileId) => {
     try {
       await fetch(
-        `http://localhost:5000/api/resources/folder/${folderId}/file/${fileId}`,
+        `https://campus-prep-project.onrender.com/api/resources/folder/${folderId}/file/${fileId}`, 
         { method: "DELETE" }
       );
 

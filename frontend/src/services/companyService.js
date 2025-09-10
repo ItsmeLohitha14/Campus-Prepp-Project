@@ -1,7 +1,7 @@
 // frontend/src/services/companyService.js
 import axios from "axios";
 
-const API = "http://localhost:5000/api/admin";
+const API = "https://campus-prep-project.onrender.com/api/admin";
 
 // ADMIN: Add a company
 export const addCompany = async (companyData, token) => {

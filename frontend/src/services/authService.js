@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/auth";
-const ADMIN_API = "http://localhost:5000/api/admin";
+const API_URL = "https://campus-prep-project.onrender.com/api/auth";
+const ADMIN_API = "https://campus-prep-project.onrender.com/api/admin";
 
 export const register = async (userData) => {
   const res = await axios.post(`${API_URL}/register`, userData);
