@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#0F1117] text-white pt-12">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 pb-10 border-b border-gray-700">
-        
+
         {/* Brand Info */}
         <div>
           <h2 className="flex items-center gap-2 text-xl font-semibold text-purple-400">
@@ -67,14 +67,16 @@ const Footer = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className="text-sm text-gray-400 py-6 px-6 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto">
-        <p>© 2025 CampusPrep. All rights reserved.</p>
-        <div className="flex gap-6 mt-2 md:mt-0">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Cookie Policy</a>
+      {/* Bottom Section */}
+      <div className="text-sm text-gray-400 py-6 px-6 flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto gap-3 md:gap-0">
+        <p className="text-center md:text-left">© 2025 CampusPrep. All rights reserved.</p>
+        <div className="flex flex-wrap justify-center md:justify-end gap-4 mt-2 md:mt-0">
+          <a href="#" className="hover:text-white">Privacy Policy</a>
+          <a href="#" className="hover:text-white">Terms of Service</a>
+          <a href="#" className="hover:text-white">Cookie Policy</a>
         </div>
       </div>
+
     </footer>
   );
 };
