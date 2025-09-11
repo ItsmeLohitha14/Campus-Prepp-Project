@@ -11,7 +11,7 @@ const ResourceManagement = () => {
   useEffect(() => {
     const fetchFolders = async () => {
       try {
-        const res = await axios.get("/api/resources/folders");
+        const res = await axios.get("https://campus-prep-project.onrender.com/api/resources/folders");
         setFolders(res.data);
       } catch (err) {
         console.error("Error fetching folders:", err);

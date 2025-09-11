@@ -21,8 +21,7 @@ import AdminDashboard from './pages/AdminDashboard';
 import CompaniesPage from "./pages/CompaniesPage";
 import AnalyticsPage from "./pages/AnalyticsPage";
 import UserAnalyticsPage from './pages/UserAnalyticsPage';
-import QuestionDetails from "./pages/QuestionDetails"; // ✅ Make sure this file exists
-
+import QuestionDetails from "./pages/QuestionDetails"; // ✅ Make sure this file exists 
 const App = () => {
   const location = useLocation();
 
@@ -60,7 +59,7 @@ const App = () => {
               <HeroSection />
             </>
           }
-        />
+        /> 
         <Route path="/companies" element={<Companies />} />
         <Route path="/questions" element={<Questions />} />
         <Route path="/updates" element={<Updates />} />

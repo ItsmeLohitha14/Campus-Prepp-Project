@@ -51,7 +51,7 @@ export default function DashboardPage() {
   useEffect(() => {
     const fetchAnnouncements = async () => {
       try {
-        const response = await axios.get("/api/announcements");
+        const response = await axios.get("https://campus-prep-project.onrender.com/api/announcements");
         setAnnouncements(response.data);
       } catch (error) {
         console.error("Failed to fetch announcements", error);
@@ -74,6 +74,9 @@ export default function DashboardPage() {
 
     fetchQuestions();
   }, []);
+
+
+
 
   const [form, setForm] = useState({
     department: "",
@@ -201,7 +204,7 @@ export default function DashboardPage() {
 
   const recentUpdates = [
     {
-      title: "Lumen Recruitment Drive Announced",  
+      title: "Lumen Recruitment Drive Announced",
       date: "15 May 2025",
     },
     {

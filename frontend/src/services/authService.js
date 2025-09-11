@@ -29,3 +29,5 @@ export const logout = () => {
 export const isAuthenticated = () => {
   return !!localStorage.getItem("token");
 };
+
+
